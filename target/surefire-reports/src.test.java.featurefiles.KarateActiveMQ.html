@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.featurefiles.KarateActiveMQ</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-02-04 04:53:23 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1:22]">[1:22] Getting ActiveMQ Server Status </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/featurefiles/KarateActiveMQ.feature</span><span class="feature-description">JMS REST API  - Test Suite ActiveMQ | interacting with JMS - ActiveMQ Server</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:22]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:22]</span><span class="scenario-name">Getting ActiveMQ Server Status </span>
+</div>
+<div class="scenario-time failed">ms: 466</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:22]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* def login =</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="1">function(uid, pwd) {
+    var temp = uid + ':' + pwd;
+    var Base64 = Java.type('java.util.Base64');
+    var encoded = Base64.getEncoder().encodeToString(temp.bytes);
+    return 'Basic ' + encoded;
+}
+16:53:22.420 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* def auth = login("admin", "admin")</div>
+</div>
+<div class="time-cell passed">24</div>
+</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-cell passed">* print auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="3">16:53:22.461 [print] Basic YWRtaW46YWRtaW4=</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#* configure ssl = true</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-cell passed">Given url "http://192.168.1.62:8161"</div>
+</div>
+<div class="time-cell passed">34</div>
+</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="5">
+<div class="step-ref bg-step">5</div>
+<div class="step-cell passed">And header Authorization = auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">393</div>
+</div>
+<div class="preformatted" data-parent="6">16:53:22.781 request:
+1 &gt; GET http://192.168.1.62:8161
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic YWRtaW46YWRtaW4=
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: 192.168.1.62:8161
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:53:22.816 response time in milliseconds: 33.79
+1 &lt; 302
+1 &lt; Content-Length: 0
+1 &lt; Date: Thu, 04 Feb 2021 11:23:23 GMT
+1 &lt; Location: http://192.168.1.62:8161/index.html
+1 &lt; Server: Jetty(9.4.35.v20201120)
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-FRAME-OPTIONS: SAMEORIGIN
+1 &lt; X-XSS-Protection: 1; mode=block
+
+16:53:22.830 request:
+2 &gt; GET http://192.168.1.62:8161
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Authorization: Basic YWRtaW46YWRtaW4=
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: 192.168.1.62:8161
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:53:22.860 response time in milliseconds: 18.55
+2 &lt; 200
+2 &lt; Accept-Ranges: bytes
+2 &lt; Content-Length: 6047
+2 &lt; Content-Type: text/html
+2 &lt; Date: Thu, 04 Feb 2021 11:23:23 GMT
+2 &lt; Last-Modified: Wed, 02 Dec 2020 19:28:32 GMT
+2 &lt; Server: Jetty(9.4.35.v20201120)
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-FRAME-OPTIONS: SAMEORIGIN
+2 &lt; X-XSS-Protection: 1; mode=block
+&lt;!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--&gt;
+ 
+ 
+ 
+ 
+ 
+ 
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; 
+ 
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt; 
+&lt;html&gt; 
+&lt;head&gt; 
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt; 
+    &lt;title&gt;Apache ActiveMQ&lt;/title&gt; 
+    &lt;style type="text/css" media="screen"&gt; 
+        @import url(/styles/sorttable.css);
+        @import url(/styles/type-settings.css);
+        @import url(/styles/site.css);
+        @import url(/styles/prettify.css);
+    &lt;/style&gt; 
+&lt;/head&gt; 
+ 
+&lt;body&gt; 
+ 
+ 
+&lt;div class="white_box"&gt; 
+    &lt;div class="header"&gt; 
+        &lt;div class="header_l"&gt; 
+            &lt;div class="header_r"&gt; 
+            &lt;/div&gt; 
+        &lt;/div&gt; 
+    &lt;/div&gt; 
+    &lt;div class="content"&gt; 
+        &lt;div class="content_l"&gt; 
+            &lt;div class="content_r"&gt; 
+ 
+                &lt;div&gt; 
+ 
+                    &lt;!-- Banner --&gt; 
+                    &lt;div id="asf_logo"&gt; 
+                        &lt;div id="activemq_logo"&gt; 
+                            &lt;a style="float:left; width:280px;display:block;text-indent:-5000px;text-decoration:none;line-height:60px; margin-top:10px; margin-left:100px;"
+                               href="http://activemq.apache.org/"
+                               title="The most popular and powerful open source Message Broker"&gt;ActiveMQ&lt;/a&gt; 
+                            &lt;a style="float:right; width:210px;display:block;text-indent:-5000px;text-decoration:none;line-height:60px; margin-top:15px; margin-right:10px;"
+                               href="http://www.apache.org/" title="The Apache Software Foundation"&gt;ASF&lt;/a&gt; 
+                        &lt;/div&gt; 
+                    &lt;/div&gt; 
+ 
+ 
+                    &lt;div class="top_red_bar"&gt; 
+                        &lt;div id="site-breadcrumbs"&gt; 
+                        &lt;/div&gt; 
+                        &lt;div id="site-quicklinks"&gt;&lt;P&gt; 
+                            &lt;a href="http://activemq.apache.org/support.html"
+                               title="Get help and support using Apache ActiveMQ"&gt;Support&lt;/a&gt;&lt;/p&gt; 
+                        &lt;/div&gt; 
+                    &lt;/div&gt; 
+ 
+                    &lt;table border="0"&gt; 
+                        &lt;tbody&gt; 
+                            &lt;tr&gt; 
+                                &lt;td valign="top" width="100%" style="overflow:hidden;"&gt; 
+                                    &lt;div class="body-content"&gt; 
+                                        &lt;h2&gt;Welcome to the Apache ActiveMQ!&lt;/h2&gt; 
+                                            
+                                                &lt;p&gt;What do you want to do next?&lt;/p&gt;
+                                                &lt;ul class="alternate" type="square"&gt; 
+                                                    &lt;li&gt;&lt;a title="Manage ActiveMQ broker" href="/admin/"&gt;Manage ActiveMQ broker&lt;/a&gt;&lt;/li&gt; 
+                                                    &lt;li&gt;&lt;a title="See some Web demos" href="/demo/"&gt;See some Web demos (demos not included in default configuration)&lt;/a&gt;&lt;/li&gt;  
+                                                &lt;/ul&gt; 
+                                    &lt;/div&gt; 
+                                &lt;/td&gt; 
+                                &lt;td valign="top"&gt; 
+ 
+                                    &lt;div class="navigation"&gt; 
+                                        &lt;div class="navigation_top"&gt; 
+                                            &lt;div class="navigation_bottom"&gt; 
+                                                &lt;H3&gt;Useful Links&lt;/H3&gt; 
+ 
+                                                &lt;ul class="alternate" type="square"&gt; 
+                                                    &lt;li&gt;&lt;a href="http://activemq.apache.org/"
+                                                           title="The most popular and powerful open source Message Broker"&gt;Documentation&lt;/a&gt;&lt;/li&gt; 
+                                                    &lt;li&gt;&lt;a href="http://activemq.apache.org/faq.html"&gt;FAQ&lt;/a&gt;&lt;/li&gt; 
+                                                    &lt;li&gt;&lt;a href="http://activemq.apache.org/download.html"&gt;Downloads&lt;/a&gt; 
+                                                    &lt;/li&gt; 
+                                                    &lt;li&gt;&lt;a href="http://activemq.apache.org/discussion-forums.html"&gt;Forums&lt;/a&gt; 
+                                                    &lt;/li&gt; 
+                                                &lt;/ul&gt; 
+                                            &lt;/div&gt; 
+                                        &lt;/div&gt; 
+                                    &lt;/div&gt; 
+                                &lt;/td&gt; 
+                            &lt;/tr&gt; 
+                        &lt;/tbody&gt; 
+                    &lt;/table&gt; 
+ 
+ 
+                    &lt;div class="bottom_red_bar"&gt;&lt;/div&gt; 
+                &lt;/div&gt; 
+            &lt;/div&gt; 
+        &lt;/div&gt; 
+    &lt;/div&gt; 
+    &lt;div class="black_box"&gt; 
+        &lt;div class="footer"&gt; 
+            &lt;div class="footer_l"&gt; 
+                &lt;div class="footer_r"&gt; 
+                    &lt;div&gt; 
+                        Copyright 2005-2020 The Apache Software Foundation.
+                    &lt;/div&gt; 
+                &lt;/div&gt; 
+            &lt;/div&gt; 
+        &lt;/div&gt; 
+    &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;div class="design_attribution"&gt;&lt;a href="http://hiramchirino.com/"&gt;Graphic Design By Hiram&lt;/a&gt;&lt;/div&gt; 
+ 
+&lt;/body&gt; 
+&lt;/html&gt; 
+
+16:53:22.887 xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 25; columnNumber: 10; Already seen doctype.</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* print responseType</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="8">16:53:22.889 [print] string</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref failed">9</div>
+<div class="step-cell failed">* assert responseType == "json"</div>
+</div>
+<div class="time-cell failed">9</div>
+</div>
+<div class="preformatted" data-parent="9">16:53:22.898 assertion failed: assert evaluated to false: responseType == "json"
+KarateActiveMQ.feature:27 - assert evaluated to false: responseType == "json"</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref skipped">10</div>
+<div class="step-cell skipped">* match response.value.agent == "1.3.4"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref skipped">11</div>
+<div class="step-cell skipped">* match response.value.info.product == "activemq"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

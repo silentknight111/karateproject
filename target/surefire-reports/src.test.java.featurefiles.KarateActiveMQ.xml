@@ -1,0 +1,20 @@
+<testsuite failures="1" name="src/test/java/featurefiles/KarateActiveMQ.feature" skipped="0" tests="1" time="0.466137">
+  <testcase classname="src.test.java.featurefiles.KarateActiveMQ" name="Getting ActiveMQ Server Status" time="0.466137">
+    <failure message="KarateActiveMQ.feature:27 - assert evaluated to false: responseType == &quot;json&quot;">* def login = ............................................................. passed
+* def auth = login("admin", "admin") ...................................... passed
+* print auth .............................................................. passed
+Given url "http://192.168.1.62:8161" ...................................... passed
+And header Authorization = auth ........................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print responseType ...................................................... passed
+* assert responseType == "json" ........................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: KarateActiveMQ.feature:27 - assert evaluated to false: responseType == "json"&#13;
+	at ✽.* assert responseType == "json" (KarateActiveMQ.feature:27)&#13;
+
+* match response.value.agent == "1.3.4" ................................... skipped
+* match response.value.info.product == "activemq" ......................... skipped</failure>
+  </testcase>
+</testsuite>

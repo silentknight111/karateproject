@@ -1,0 +1,16 @@
+<testsuite failures="0" name="featurefiles/Karate_05REST_API.feature" skipped="0" tests="1" time="0.306427">
+  <testcase classname="featurefiles.Karate_05REST_API" name="REST API testing" time="0.306427">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response contains "98.6" .......................................... passed</system-out>
+  </testcase>
+</testsuite>

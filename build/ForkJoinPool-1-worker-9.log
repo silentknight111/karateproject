@@ -1,0 +1,81 @@
+16:02:53.192 From karate-config file 
+16:02:53.333 [print] after assert
+16:02:53.348 after scenario inside config 
+16:02:53.348 From karate-config file 
+16:02:53.442 after scenario inside config 
+16:02:53.457 From karate-config file 
+16:02:54.114 [print] 1
+16:02:54.223 after scenario inside config 
+16:02:54.223 From karate-config file 
+16:02:54.223 request:
+1 > DELETE http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer
+1 > Accept: application/vnd.kafka.v2+json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 192.168.1.62:8082
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:02:54.270 response time in milliseconds: 5.37
+1 < 404
+1 < Content-Length: 61
+1 < Content-Type: application/vnd.kafka.v2+json
+1 < Date: Fri, 05 Feb 2021 10:32:55 GMT
+{"error_code":40403,"message":"Consumer instance not found."}
+
+16:02:54.270 after scenario inside config 
+16:02:54.676 From karate-config file 
+16:02:54.676 request:
+1 > POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 10
+1 > Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 > Host: www.w3schools.com
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius=37
+
+16:02:54.973 response time in milliseconds: 290.32
+1 < 200
+1 < Cache-Control: private, max-age=0,public
+1 < Content-Type: text/xml; charset=utf-8
+1 < Date: Fri, 05 Feb 2021 10:24:44 GMT
+1 < Server: Microsoft-IIS/7.5
+1 < Vary: Accept-Encoding
+1 < X-AspNet-Version: 4.0.30319
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-Powered-By: ASP.NET
+<?xml version="1.0" encoding="utf-8"?>
+<string xmlns="https://www.w3schools.com/xml/">98.6</string>
+
+16:02:54.973 [print] {
+  "Cache-Control": [
+    "private, max-age=0,public"
+  ],
+  "Content-Type": [
+    "text/xml; charset=utf-8"
+  ],
+  "Date": [
+    "Fri, 05 Feb 2021 10:24:44 GMT"
+  ],
+  "Server": [
+    "Microsoft-IIS/7.5"
+  ],
+  "Vary": [
+    "Accept-Encoding"
+  ],
+  "X-AspNet-Version": [
+    "4.0.30319"
+  ],
+  "X-Frame-Options": [
+    "SAMEORIGIN"
+  ],
+  "X-Powered-By": [
+    "ASP.NET"
+  ]
+}
+
+16:02:54.973 [print] xml
+16:02:54.973 [print] 290
+16:02:54.973 [print] <string xmlns="https://www.w3schools.com/xml/">98.6</string>
+
+16:02:54.973 after scenario inside config 

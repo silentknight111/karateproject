@@ -1,0 +1,59 @@
+<testsuite failures="1" name="featurefiles/karate15db.feature" skipped="0" tests="4" time="0.41237">
+  <testcase classname="featurefiles.karate15db" name="select stmt test case" time="0.211952">
+    <system-out>* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate15db" name="insert stmt test case" time="0.14774">
+    <system-out>* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def res = db.insertStatement("Insert into tools values(110,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate15db" name="update stmt test case" time="0.028483">
+    <failure message="karate15db.feature:25 - assert evaluated to false: rowsAffected &gt;= 1">* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def res = db.insertStatement("Insert into tools values(110,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rowsAffected = db.updateStatement("update tools set id=1111 where id=105") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate15db.feature:25 - assert evaluated to false: rowsAffected &gt;= 1&#13;
+	at ✽.* assert rowsAffected &gt;= 1 (karate15db.feature:25)</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate15db" name="delete stmt test case" time="0.024194">
+    <system-out>* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def res = db.insertStatement("Insert into tools values(110,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rowsAffected = db.updateStatement("update tools set id=1111 where id=105") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate15db.feature:25 - assert evaluated to false: rowsAffected &gt;= 1&#13;
+	at ✽.* assert rowsAffected &gt;= 1 (karate15db.feature:25)&#13;
+
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rowsAffected = db.deleteStatement("delete from tools where id=110") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ passed</system-out>
+  </testcase>
+</testsuite>

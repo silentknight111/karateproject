@@ -1,0 +1,453 @@
+<testsuite failures="7" name="src/test/java/featurefiles/karate22.feature" skipped="0" tests="8" time="0.54059">
+  <testcase classname="src.test.java.featurefiles.karate22" name="Creating Consumer" time="0.440674">
+    <failure message="karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal&#13;
+	at ✽.* match response.instance_id == "veera_consumer" (karate22.feature:22)&#13;
+
+* def consumer_url = response.base_uri .................................... skipped
+* print consumer_url ...................................................... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate22" name="Subscribing to topic" time="0.016816">
+    <failure message="karate22.feature:38 - status code was: 404, expected: 204, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {&quot;error_code&quot;:40403,&quot;message&quot;:&quot;Consumer instance not found.&quot;}">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal&#13;
+	at ✽.* match response.instance_id == "veera_consumer" (karate22.feature:22)&#13;
+
+* def consumer_url = response.base_uri .................................... skipped
+* print consumer_url ...................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:38 - status code was: 404, expected: 204, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:38)</failure>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate22" name="Getting Subscription" time="0.008516">
+    <failure message="karate22.feature:46 - status code was: 404, expected: 200, response time: 5, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {&quot;error_code&quot;:40403,&quot;message&quot;:&quot;Consumer instance not found.&quot;}">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal&#13;
+	at ✽.* match response.instance_id == "veera_consumer" (karate22.feature:22)&#13;
+
+* def consumer_url = response.base_uri .................................... skipped
+* print consumer_url ...................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:38 - status code was: 404, expected: 204, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:38)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:46 - status code was: 404, expected: 200, response time: 5, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:46)&#13;
+
+* print response .......................................................... skipped
+* assert response.topics[0] == "veera_topic" .............................. skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate22" name="Getting Subscription records" time="0.01954">
+    <failure message="karate22.feature:57 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/records?timeout=3000&amp;max_bytes=300000, response: {&quot;error_code&quot;:40403,&quot;message&quot;:&quot;Consumer instance not found.&quot;}">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal&#13;
+	at ✽.* match response.instance_id == "veera_consumer" (karate22.feature:22)&#13;
+
+* def consumer_url = response.base_uri .................................... skipped
+* print consumer_url ...................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:38 - status code was: 404, expected: 204, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:38)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:46 - status code was: 404, expected: 200, response time: 5, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:46)&#13;
+
+* print response .......................................................... skipped
+* assert response.topics[0] == "veera_topic" .............................. skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:57 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/records?timeout=3000&amp;max_bytes=300000, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:57)&#13;
+
+* print response .......................................................... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate22" name="Getting assigned Assignments" time="0.012275">
+    <failure message="karate22.feature:65 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/assignments, response: {&quot;error_code&quot;:40403,&quot;message&quot;:&quot;Consumer instance not found.&quot;}">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal&#13;
+	at ✽.* match response.instance_id == "veera_consumer" (karate22.feature:22)&#13;
+
+* def consumer_url = response.base_uri .................................... skipped
+* print consumer_url ...................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:38 - status code was: 404, expected: 204, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:38)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:46 - status code was: 404, expected: 200, response time: 5, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:46)&#13;
+
+* print response .......................................................... skipped
+* assert response.topics[0] == "veera_topic" .............................. skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:57 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/records?timeout=3000&amp;max_bytes=300000, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:57)&#13;
+
+* print response .......................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:65 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/assignments, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:65)&#13;
+
+* print response .......................................................... skipped
+* assert response.partitions[0].topic == "veera_topic" .................... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate22" name="Deleting assigned subscription" time="0.010669">
+    <failure message="karate22.feature:75 - status code was: 404, expected: 204, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {&quot;error_code&quot;:40403,&quot;message&quot;:&quot;Consumer instance not found.&quot;}">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal&#13;
+	at ✽.* match response.instance_id == "veera_consumer" (karate22.feature:22)&#13;
+
+* def consumer_url = response.base_uri .................................... skipped
+* print consumer_url ...................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:38 - status code was: 404, expected: 204, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:38)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:46 - status code was: 404, expected: 200, response time: 5, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:46)&#13;
+
+* print response .......................................................... skipped
+* assert response.topics[0] == "veera_topic" .............................. skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:57 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/records?timeout=3000&amp;max_bytes=300000, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:57)&#13;
+
+* print response .......................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:65 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/assignments, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:65)&#13;
+
+* print response .......................................................... skipped
+* assert response.partitions[0].topic == "veera_topic" .................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:75 - status code was: 404, expected: 204, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:75)</failure>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate22" name="Deleting consumer" time="0.014253">
+    <failure message="karate22.feature:82 - status code was: 404, expected: 204, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer, response: {&quot;error_code&quot;:40403,&quot;message&quot;:&quot;Consumer instance not found.&quot;}">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal&#13;
+	at ✽.* match response.instance_id == "veera_consumer" (karate22.feature:22)&#13;
+
+* def consumer_url = response.base_uri .................................... skipped
+* print consumer_url ...................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:38 - status code was: 404, expected: 204, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:38)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:46 - status code was: 404, expected: 200, response time: 5, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:46)&#13;
+
+* print response .......................................................... skipped
+* assert response.topics[0] == "veera_topic" .............................. skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:57 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/records?timeout=3000&amp;max_bytes=300000, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:57)&#13;
+
+* print response .......................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:65 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/assignments, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:65)&#13;
+
+* print response .......................................................... skipped
+* assert response.partitions[0].topic == "veera_topic" .................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:75 - status code was: 404, expected: 204, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:75)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer" ........ passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:82 - status code was: 404, expected: 204, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:82)</failure>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate22" name="Deleting consumer - Negative Test Case" time="0.017847">
+    <system-out>Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:22 - path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal&#13;
+	at ✽.* match response.instance_id == "veera_consumer" (karate22.feature:22)&#13;
+
+* def consumer_url = response.base_uri .................................... skipped
+* print consumer_url ...................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:38 - status code was: 404, expected: 204, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:38)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:46 - status code was: 404, expected: 200, response time: 5, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:46)&#13;
+
+* print response .......................................................... skipped
+* assert response.topics[0] == "veera_topic" .............................. skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:57 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/records?timeout=3000&amp;max_bytes=300000, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:57)&#13;
+
+* print response .......................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:65 - status code was: 404, expected: 200, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/assignments, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 200 (karate22.feature:65)&#13;
+
+* print response .......................................................... skipped
+* assert response.partitions[0].topic == "veera_topic" .................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:75 - status code was: 404, expected: 204, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:75)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer" ........ passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22.feature:82 - status code was: 404, expected: 204, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer, response: {"error_code":40403,"message":"Consumer instance not found."}&#13;
+	at ✽.Then status 204 (karate22.feature:82)&#13;
+
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer" ........ passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 404 ........................................................... passed
+* assert response.message == "Consumer instance not found." ............... passed</system-out>
+  </testcase>
+</testsuite>

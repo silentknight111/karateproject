@@ -1,0 +1,8 @@
+<testsuite failures="0" name="src/test/java/featurefiles/karate15db.feature" skipped="0" tests="1" time="0.49365">
+  <testcase classname="src.test.java.featurefiles.karate15db" name="select stmt test case" time="0.49365">
+    <system-out>* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed</system-out>
+  </testcase>
+</testsuite>

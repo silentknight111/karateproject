@@ -1,0 +1,281 @@
+16:02:53.192 From karate-config file 
+16:02:53.426 [print] <info>
+  <id>101</id>
+  <tool>
+    <name>Karate</name>
+    <version>0.9.6</version>
+  </tool>
+</info>
+
+16:02:53.504 [print]
+16:02:53.504 [print] 101
+16:02:53.504 [print] Karate
+16:02:53.520 after scenario inside config 
+16:02:53.520 From karate-config file 
+16:02:53.536 after scenario inside config 
+16:02:53.551 From karate-config file 
+16:02:53.551 after scenario inside config 
+16:02:53.645 From karate-config file 
+16:02:53.942 request:
+1 > POST http://192.168.1.62:8082/topics/topic3
+1 > Accept: application/vnd.kafka.v2+json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 96
+1 > Content-Type: application/vnd.kafka.json.v2+json; charset=UTF-8
+1 > Host: 192.168.1.62:8082
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+{"records":[{"key":"key3","value":"key-value3"},{"value":"val3","partition":0},{"value":123.3}]}
+
+16:02:53.989 response time in milliseconds: 42.50
+1 < 200
+1 < Content-Type: application/vnd.kafka.v2+json
+1 < Date: Fri, 05 Feb 2021 10:32:54 GMT
+1 < Vary: Accept-Encoding, User-Agent
+{"offsets":[{"partition":0,"offset":21,"error_code":null,"error":null},{"partition":0,"offset":22,"error_code":null,"error":null},{"partition":0,"offset":23,"error_code":null,"error":null}],"key_schema_id":null,"value_schema_id":null}
+
+16:02:53.989 [print] {
+  "offsets": [
+    {
+      "partition": 0,
+      "offset": 21,
+      "error_code": null,
+      "error": null
+    },
+    {
+      "partition": 0,
+      "offset": 22,
+      "error_code": null,
+      "error": null
+    },
+    {
+      "partition": 0,
+      "offset": 23,
+      "error_code": null,
+      "error": null
+    }
+  ],
+  "value_schema_id": null,
+  "key_schema_id": null
+}
+
+16:02:53.989 after scenario inside config 
+16:02:53.989 From karate-config file 
+16:02:54.004 request:
+1 > POST http://192.168.1.62:8082/consumers/my-consumer-group
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 92
+1 > Content-Type: application/vnd.kafka.json.v2+json; charset=UTF-8
+1 > Host: 192.168.1.62:8082
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+{"name":"shubh","format":"json","auto.offset.reset":"earliest","auto.commit.enable":"false"}
+
+16:02:54.052 response time in milliseconds: 25.85
+1 < 200
+1 < Content-Type: application/vnd.kafka.v2+json
+1 < Date: Fri, 05 Feb 2021 10:32:54 GMT
+1 < Vary: Accept-Encoding, User-Agent
+{"instance_id":"shubh","base_uri":"http://192.168.1.62:8082/consumers/my-consumer-group/instances/shubh"}
+
+16:02:54.052 [print] {
+  "instance_id": "shubh",
+  "base_uri": "http://192.168.1.62:8082/consumers/my-consumer-group/instances/shubh"
+}
+
+16:02:54.067 assertion failed: path: $.instance_id, actual: 'shubh', expected: 'veera_consumer', reason: not equal
+16:02:54.067 after scenario inside config 
+16:02:54.286 From karate-config file 
+16:02:54.301 request:
+1 > GET https://reqres.in/api/users%3Fpage=2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: reqres.in
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:02:54.473 response time in milliseconds: 164.34
+1 < 200
+1 < Access-Control-Allow-Origin: *
+1 < Age: 7110
+1 < CF-Cache-Status: HIT
+1 < CF-RAY: 61cbf861382e1aa8-SIN
+1 < Cache-Control: max-age=14400
+1 < Connection: keep-alive
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 05 Feb 2021 10:32:55 GMT
+1 < Etag: W/"2c1-N6Rqerxquq2kgQhL51EiSg4x0R8"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < NEL: {"max_age":604800,"report_to":"cf-nel"}
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=ulkc2powL%2BZr%2BGBl%2FqrwA71X4qdMYjkbiqbq4q2RvvAu2YiLCTrv%2FehilMxYQfCrU0L23WH7%2Fe01ETvbyFdtGtJeGq3M0vYojWs%3D"}],"group":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=d06da650f8613a7c4f04a4dfe130dcaf11612521175; expires=Sun, 07-Mar-21 10:32:55 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Powered-By: Express
+1 < cf-request-id: 08135990c600001aa8238e0000000001
+{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+
+16:02:54.473 [print] {
+  "per_page": 6,
+  "total": 12,
+  "data": [
+    {
+      "color": "#98B2D1",
+      "year": 2000,
+      "name": "cerulean",
+      "id": 1,
+      "pantone_value": "15-4020"
+    },
+    {
+      "color": "#C74375",
+      "year": 2001,
+      "name": "fuchsia rose",
+      "id": 2,
+      "pantone_value": "17-2031"
+    },
+    {
+      "color": "#BF1932",
+      "year": 2002,
+      "name": "true red",
+      "id": 3,
+      "pantone_value": "19-1664"
+    },
+    {
+      "color": "#7BC4C4",
+      "year": 2003,
+      "name": "aqua sky",
+      "id": 4,
+      "pantone_value": "14-4811"
+    },
+    {
+      "color": "#E2583E",
+      "year": 2004,
+      "name": "tigerlily",
+      "id": 5,
+      "pantone_value": "17-1456"
+    },
+    {
+      "color": "#53B0AE",
+      "year": 2005,
+      "name": "blue turquoise",
+      "id": 6,
+      "pantone_value": "15-5217"
+    }
+  ],
+  "page": 1,
+  "total_pages": 2,
+  "support": {
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
+    "url": "https://reqres.in/#support-heading"
+  }
+}
+
+16:02:54.473 after scenario inside config 
+16:02:54.505 From karate-config file 
+16:02:54.536 request:
+1 > POST https://www.w3schools.com/xml/tempconvert.asmx
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 359
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: www.w3schools.com
+1 > SOAPAction: https://www.w3schools.com/xml/CelsiusToFahrenheit
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <CelsiusToFahrenheit xmlns="https://www.w3schools.com/xml/">
+            <Celsius>37</Celsius>
+        </CelsiusToFahrenheit>
+    </soap:Body>
+</soap:Envelope>
+
+16:02:54.817 response time in milliseconds: 282.63
+1 < 200
+1 < Cache-Control: private, max-age=0,public
+1 < Content-Type: text/xml; charset=utf-8
+1 < Date: Fri, 05 Feb 2021 10:24:44 GMT
+1 < Server: Microsoft-IIS/7.5
+1 < Vary: Accept-Encoding
+1 < X-AspNet-Version: 4.0.30319
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-Powered-By: ASP.NET
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><CelsiusToFahrenheitResponse xmlns="https://www.w3schools.com/xml/"><CelsiusToFahrenheitResult>98.6</CelsiusToFahrenheitResult></CelsiusToFahrenheitResponse></soap:Body></soap:Envelope>
+
+16:02:54.817 [print] [
+  "Microsoft-IIS/7.5"
+]
+
+16:02:54.817 [print] Microsoft-IIS/7.5
+16:02:54.817 [print] xml
+16:02:54.817 [print] <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <CelsiusToFahrenheitResponse xmlns="https://www.w3schools.com/xml/">
+      <CelsiusToFahrenheitResult>98.6</CelsiusToFahrenheitResult>
+    </CelsiusToFahrenheitResponse>
+  </soap:Body>
+</soap:Envelope>
+
+16:02:54.817 [print] 283
+16:02:54.817 [print] 200
+16:02:54.817 [print] false
+16:02:54.817 [print] true
+16:02:54.817 after scenario inside config 
+16:02:54.817 From karate-config file 
+16:02:54.833 [print] sharma
+16:02:54.833 [print] sharma
+16:02:54.833 after scenario inside config 
+16:02:54.833 request:
+1 > POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 10
+1 > Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 > Host: www.w3schools.com
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius=40
+
+16:02:55.145 response time in milliseconds: 299.85
+1 < 200
+1 < Cache-Control: private, max-age=0,public
+1 < Content-Type: text/xml; charset=utf-8
+1 < Date: Fri, 05 Feb 2021 10:24:44 GMT
+1 < Server: Microsoft-IIS/7.5
+1 < Vary: Accept-Encoding
+1 < X-AspNet-Version: 4.0.30319
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-Powered-By: ASP.NET
+<?xml version="1.0" encoding="utf-8"?>
+<string xmlns="https://www.w3schools.com/xml/">104</string>
+
+16:02:55.145 [print] {
+  "Cache-Control": [
+    "private, max-age=0,public"
+  ],
+  "Content-Type": [
+    "text/xml; charset=utf-8"
+  ],
+  "Date": [
+    "Fri, 05 Feb 2021 10:24:44 GMT"
+  ],
+  "Server": [
+    "Microsoft-IIS/7.5"
+  ],
+  "Vary": [
+    "Accept-Encoding"
+  ],
+  "X-AspNet-Version": [
+    "4.0.30319"
+  ],
+  "X-Frame-Options": [
+    "SAMEORIGIN"
+  ],
+  "X-Powered-By": [
+    "ASP.NET"
+  ]
+}
+
+16:02:55.145 [print] xml
+16:02:55.145 [print] 300
+16:02:55.145 [print] <string xmlns="https://www.w3schools.com/xml/">104</string>
+

@@ -1,0 +1,130 @@
+<testsuite failures="0" name="featurefiles/Karate_12.feature" skipped="0" tests="4" time="1.249068">
+  <testcase classname="featurefiles.Karate_12" name="DDT Test case 1" time="0.31262">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 98.6 ......................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.Karate_12" name="DDT Test case 1" time="0.321825">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 98.6 ......................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 104 .......................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.Karate_12" name="DDT Test case 2" time="0.313125">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 98.6 ......................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 104 .......................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 98.6 ......................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.Karate_12" name="DDT Test case 2" time="0.301499">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 98.6 ......................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 104 .......................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 98.6 ......................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* match response //string == 104 .......................................... passed</system-out>
+  </testcase>
+</testsuite>

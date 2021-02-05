@@ -1,0 +1,580 @@
+16:02:53.192 From karate-config file 
+16:02:53.285 after scenario inside config 
+16:02:53.348 From karate-config file 
+16:02:53.348 assertion failed: path: $.tool.version, actual: '0.9.6', expected: '0.9.4', reason: not equal
+16:02:53.348 after scenario inside config 
+16:02:53.489 From karate-config file 
+16:02:53.551 after scenario inside config 
+16:02:53.614 From karate-config file 
+16:02:53.645 [print] Basic cGFsbWV0b2FkbWluOlBAbG1ldG9AMTIz
+16:02:53.942 request:
+1 > GET https://192.168.1.62:8089/services/search/jobs
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic cGFsbWV0b2FkbWluOlBAbG1ldG9AMTIz
+1 > Connection: Keep-Alive
+1 > Host: 192.168.1.62:8089
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:02:54.098 response time in milliseconds: 154.96
+1 < 200
+1 < Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+1 < Connection: Keep-Alive
+1 < Content-Type: text/xml; charset=UTF-8
+1 < Date: Fri, 05 Feb 2021 10:32:54 GMT
+1 < Expires: Thu, 26 Oct 1978 00:00:00 GMT
+1 < Server: Splunkd
+1 < Vary: Accept-Encoding, Cookie, Authorization
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is to override browser formatting; see server.conf[httpServer] to disable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+<?xml-stylesheet type="text/xml" href="/static/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:s="http://dev.splunk.com/ns/rest" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+  <title>jobs</title>
+  <id>https://192.168.1.62:8089/services/search/jobs</id>
+  <updated>2021-02-05T16:02:54+05:30</updated>
+  <generator build="08187535c166" version="8.1.1"/>
+  <author>
+    <name>Splunk</name>
+  </author>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:itemsPerPage>0</opensearch:itemsPerPage>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <title>| archivebuckets</title>
+    <id>https://192.168.1.62:8089/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24</id>
+    <updated>2021-02-05T15:17:01.502+05:30</updated>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24" rel="alternate"/>
+    <published>2021-02-05T15:17:00.000+05:30</published>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24/search.log" rel="search.log"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24/search_telemetry.json" rel="search_telemetry.json"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24/events" rel="events"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24/results" rel="results"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24/results_preview" rel="results_preview"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24/timeline" rel="timeline"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24/summary" rel="summary"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24/control" rel="control"/>
+    <author>
+      <name>splunk-system-user</name>
+    </author>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="canSummarize">0</s:key>
+        <s:key name="cursorTime">1970-01-01T05:30:00.000+05:30</s:key>
+        <s:key name="defaultSaveTTL">604800</s:key>
+        <s:key name="defaultTTL">600</s:key>
+        <s:key name="delegate">scheduler</s:key>
+        <s:key name="diskUsage">53248</s:key>
+        <s:key name="dispatchState">DONE</s:key>
+        <s:key name="doneProgress">1.00000</s:key>
+        <s:key name="dropCount">0</s:key>
+        <s:key name="earliestTime">1970-01-01T05:30:00.000+05:30</s:key>
+        <s:key name="eventAvailableCount">0</s:key>
+        <s:key name="eventCount">0</s:key>
+        <s:key name="eventFieldCount">0</s:key>
+        <s:key name="eventIsStreaming">1</s:key>
+        <s:key name="eventIsTruncated">0</s:key>
+        <s:key name="eventSearch">archivebuckets </s:key>
+        <s:key name="eventSorting">none</s:key>
+        <s:key name="isBatchModeSearch">0</s:key>
+        <s:key name="isDone">1</s:key>
+        <s:key name="isEventsPreviewEnabled">0</s:key>
+        <s:key name="isFailed">0</s:key>
+        <s:key name="isFinalized">0</s:key>
+        <s:key name="isPaused">0</s:key>
+        <s:key name="isPreviewEnabled">0</s:key>
+        <s:key name="isRealTimeSearch">0</s:key>
+        <s:key name="isRemoteTimeline">0</s:key>
+        <s:key name="isSaved">0</s:key>
+        <s:key name="isSavedSearch">1</s:key>
+        <s:key name="isTimeCursored">0</s:key>
+        <s:key name="isZombie">0</s:key>
+        <s:key name="keywords"></s:key>
+        <s:key name="label">Bucket Copy Trigger</s:key>
+        <s:key name="latestTime">2021-02-05T15:17:00.000+05:30</s:key>
+        <s:key name="normalizedSearch"></s:key>
+        <s:key name="numPreviews">0</s:key>
+        <s:key name="optimizedSearch">| archivebuckets</s:key>
+        <s:key name="phase0"></s:key>
+        <s:key name="phase1">archivebuckets  | timeliner  remote=0 partial_commits=0 max_events_per_bucket=500000 fieldstats_update_maxperiod=60 bucket=0</s:key>
+        <s:key name="pid">121866</s:key>
+        <s:key name="priority">5</s:key>
+        <s:key name="provenance">scheduler</s:key>
+        <s:key name="remoteSearch"></s:key>
+        <s:key name="reportSearch"></s:key>
+        <s:key name="resultCount">0</s:key>
+        <s:key name="resultIsStreaming">1</s:key>
+        <s:key name="resultPreviewCount">0</s:key>
+        <s:key name="runDuration">0.626</s:key>
+        <s:key name="sampleRatio">1</s:key>
+        <s:key name="sampleSeed">0</s:key>
+        <s:key name="savedSearchLabel">{"owner":"nobody","app":"splunk_archiver","sharing":"app"}</s:key>
+        <s:key name="scanCount">0</s:key>
+        <s:key name="search">| archivebuckets</s:key>
+        <s:key name="searchCanBeEventType">0</s:key>
+        <s:key name="searchLatestTime">1612518420.000000000</s:key>
+        <s:key name="searchTotalBucketsCount">0</s:key>
+        <s:key name="searchTotalEliminatedBucketsCount">0</s:key>
+        <s:key name="sid">scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612518420_24</s:key>
+        <s:key name="statusBuckets">0</s:key>
+        <s:key name="ttl">4447</s:key>
+        <s:key name="workload_action_information"></s:key>
+        <s:key name="workload_pool"></s:key>
+        <s:key name="performance">
+          <s:dict>
+            <s:key name="command.archivebuckets">
+              <s:dict>
+                <s:key name="duration_secs">0.605</s:key>
+                <s:key name="invocations">1</s:key>
+                <s:key name="input_count">0</s:key>
+                <s:key name="output_count">0</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="command.timeliner">
+              <s:dict>
+                <s:key name="invocations">1</s:key>
+                <s:key name="input_count">0</s:key>
+                <s:key name="output_count">0</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.createdSearchResultInfrastructure">
+              <s:dict>
+                <s:key name="duration_secs">0.001</s:key>
+                <s:key name="invocations">1</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.evaluate.archivebuckets">
+              <s:dict>
+                <s:key name="invocations">2</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.finalWriteToDisk">
+              <s:dict>
+                <s:key name="invocations">1</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.readEventsInResults">
+              <s:dict>
+                <s:key name="invocations">1</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.timeline">
+              <s:dict>
+                <s:key name="invocations">1</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.writeStatus">
+              <s:dict>
+                <s:key name="invocations">3</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="startup.configuration">
+              <s:dict>
+                <s:key name="duration_secs">0.013</s:key>
+                <s:key name="invocations">2</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="startup.handoff">
+              <s:dict>
+                <s:key name="duration_secs">0.058</s:key>
+                <s:key name="invocations">2</s:key>
+              </s:dict>
+            </s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="messages">
+          <s:dict/>
+        </s:key>
+        <s:key name="request">
+          <s:dict>
+            <s:key name="auto_cancel">0</s:key>
+            <s:key name="auto_pause">0</s:key>
+            <s:key name="buckets">0</s:key>
+            <s:key name="earliest_time"></s:key>
+            <s:key name="index_earliest"></s:key>
+            <s:key name="index_latest"></s:key>
+            <s:key name="indexedRealtime"></s:key>
+            <s:key name="indexedRealtimeMinSpan"></s:key>
+            <s:key name="indexedRealtimeOffset"></s:key>
+            <s:key name="latest_time">now</s:key>
+            <s:key name="lookups">1</s:key>
+            <s:key name="max_count">500000</s:key>
+            <s:key name="max_time">0</s:key>
+            <s:key name="reduce_freq">10</s:key>
+            <s:key name="rt_backfill">0</s:key>
+            <s:key name="rt_maximum_span"></s:key>
+            <s:key name="sample_ratio">1</s:key>
+            <s:key name="spawn_process">1</s:key>
+            <s:key name="time_format">%FT%T.%Q%:z</s:key>
+            <s:key name="ui_dispatch_app"></s:key>
+            <s:key name="ui_dispatch_view"></s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                    <s:item>splunk-system-user</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>*</s:item>
+                    <s:item>splunk-system-user</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="owner">splunk-system-user</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="sharing">global</s:key>
+            <s:key name="app">splunk_archiver</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="ttl">7200</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="searchProviders">
+          <s:list/>
+        </s:key>
+      </s:dict>
+    </content>
+  </entry>
+  <entry>
+    <title>| archivebuckets</title>
+    <id>https://192.168.1.62:8089/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23</id>
+    <updated>2021-02-05T14:17:01.701+05:30</updated>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23" rel="alternate"/>
+    <published>2021-02-05T14:17:01.000+05:30</published>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23/search.log" rel="search.log"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23/search_telemetry.json" rel="search_telemetry.json"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23/events" rel="events"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23/results" rel="results"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23/results_preview" rel="results_preview"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23/timeline" rel="timeline"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23/summary" rel="summary"/>
+    <link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23/control" rel="control"/>
+    <author>
+      <name>splunk-system-user</name>
+    </author>
+    <content type="text/xml">
+      <s:dict>
+        <s:key name="canSummarize">0</s:key>
+        <s:key name="cursorTime">1970-01-01T05:30:00.000+05:30</s:key>
+        <s:key name="defaultSaveTTL">604800</s:key>
+        <s:key name="defaultTTL">600</s:key>
+        <s:key name="delegate">scheduler</s:key>
+        <s:key name="diskUsage">53248</s:key>
+        <s:key name="dispatchState">DONE</s:key>
+        <s:key name="doneProgress">1.00000</s:key>
+        <s:key name="dropCount">0</s:key>
+        <s:key name="earliestTime">1970-01-01T05:30:00.000+05:30</s:key>
+        <s:key name="eventAvailableCount">0</s:key>
+        <s:key name="eventCount">0</s:key>
+        <s:key name="eventFieldCount">0</s:key>
+        <s:key name="eventIsStreaming">1</s:key>
+        <s:key name="eventIsTruncated">0</s:key>
+        <s:key name="eventSearch">archivebuckets </s:key>
+        <s:key name="eventSorting">none</s:key>
+        <s:key name="isBatchModeSearch">0</s:key>
+        <s:key name="isDone">1</s:key>
+        <s:key name="isEventsPreviewEnabled">0</s:key>
+        <s:key name="isFailed">0</s:key>
+        <s:key name="isFinalized">0</s:key>
+        <s:key name="isPaused">0</s:key>
+        <s:key name="isPreviewEnabled">0</s:key>
+        <s:key name="isRealTimeSearch">0</s:key>
+        <s:key name="isRemoteTimeline">0</s:key>
+        <s:key name="isSaved">0</s:key>
+        <s:key name="isSavedSearch">1</s:key>
+        <s:key name="isTimeCursored">0</s:key>
+        <s:key name="isZombie">0</s:key>
+        <s:key name="keywords"></s:key>
+        <s:key name="label">Bucket Copy Trigger</s:key>
+        <s:key name="latestTime">2021-02-05T14:17:00.000+05:30</s:key>
+        <s:key name="normalizedSearch"></s:key>
+        <s:key name="numPreviews">0</s:key>
+        <s:key name="optimizedSearch">| archivebuckets</s:key>
+        <s:key name="phase0"></s:key>
+        <s:key name="phase1">archivebuckets  | timeliner  remote=0 partial_commits=0 max_events_per_bucket=500000 fieldstats_update_maxperiod=60 bucket=0</s:key>
+        <s:key name="pid">118600</s:key>
+        <s:key name="priority">5</s:key>
+        <s:key name="provenance">scheduler</s:key>
+        <s:key name="remoteSearch"></s:key>
+        <s:key name="reportSearch"></s:key>
+        <s:key name="resultCount">0</s:key>
+        <s:key name="resultIsStreaming">1</s:key>
+        <s:key name="resultPreviewCount">0</s:key>
+        <s:key name="runDuration">0.664</s:key>
+        <s:key name="sampleRatio">1</s:key>
+        <s:key name="sampleSeed">0</s:key>
+        <s:key name="savedSearchLabel">{"owner":"nobody","app":"splunk_archiver","sharing":"app"}</s:key>
+        <s:key name="scanCount">0</s:key>
+        <s:key name="search">| archivebuckets</s:key>
+        <s:key name="searchCanBeEventType">0</s:key>
+        <s:key name="searchLatestTime">1612514820.000000000</s:key>
+        <s:key name="searchTotalBucketsCount">0</s:key>
+        <s:key name="searchTotalEliminatedBucketsCount">0</s:key>
+        <s:key name="sid">scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612514820_23</s:key>
+        <s:key name="statusBuckets">0</s:key>
+        <s:key name="ttl">847</s:key>
+        <s:key name="workload_action_information"></s:key>
+        <s:key name="workload_pool"></s:key>
+        <s:key name="performance">
+          <s:dict>
+            <s:key name="command.archivebuckets">
+              <s:dict>
+                <s:key name="duration_secs">0.642</s:key>
+                <s:key name="invocations">1</s:key>
+                <s:key name="input_count">0</s:key>
+                <s:key name="output_count">0</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="command.timeliner">
+              <s:dict>
+                <s:key name="invocations">1</s:key>
+                <s:key name="input_count">0</s:key>
+                <s:key name="output_count">0</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.createdSearchResultInfrastructure">
+              <s:dict>
+                <s:key name="duration_secs">0.001</s:key>
+                <s:key name="invocations">1</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.evaluate.archivebuckets">
+              <s:dict>
+                <s:key name="invocations">2</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.finalWriteToDisk">
+              <s:dict>
+                <s:key name="invocations">1</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.readEventsInResults">
+              <s:dict>
+                <s:key name="invocations">1</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.timeline">
+              <s:dict>
+                <s:key name="invocations">1</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="dispatch.writeStatus">
+              <s:dict>
+                <s:key name="invocations">3</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="startup.configuration">
+              <s:dict>
+                <s:key name="duration_secs">0.012</s:key>
+                <s:key name="invocations">2</s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="startup.handoff">
+              <s:dict>
+                <s:key name="duration_secs">0.056</s:key>
+                <s:key name="invocations">2</s:key>
+              </s:dict>
+            </s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="messages">
+          <s:dict/>
+        </s:key>
+        <s:key name="request">
+          <s:dict>
+            <s:key name="auto_cancel">0</s:key>
+            <s:key name="auto_pause">0</s:key>
+            <s:key name="buckets">0</s:key>
+            <s:key name="earliest_time"></s:key>
+            <s:key name="index_earliest"></s:key>
+            <s:key name="index_latest"></s:key>
+            <s:key name="indexedRealtime"></s:key>
+            <s:key name="indexedRealtimeMinSpan"></s:key>
+            <s:key name="indexedRealtimeOffset"></s:key>
+            <s:key name="latest_time">now</s:key>
+            <s:key name="lookups">1</s:key>
+            <s:key name="max_count">500000</s:key>
+            <s:key name="max_time">0</s:key>
+            <s:key name="reduce_freq">10</s:key>
+            <s:key name="rt_backfill">0</s:key>
+            <s:key name="rt_maximum_span"></s:key>
+            <s:key name="sample_ratio">1</s:key>
+            <s:key name="spawn_process">1</s:key>
+            <s:key name="time_format">%FT%T.%Q%:z</s:key>
+            <s:key name="ui_dispatch_app"></s:key>
+            <s:key name="ui_dispatch_view"></s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="eai:acl">
+          <s:dict>
+            <s:key name="perms">
+              <s:dict>
+                <s:key name="read">
+                  <s:list>
+                    <s:item>*</s:item>
+                    <s:item>splunk-system-user</s:item>
+                  </s:list>
+                </s:key>
+                <s:key name="write">
+                  <s:list>
+                    <s:item>*</s:item>
+                    <s:item>splunk-system-user</s:item>
+                  </s:list>
+                </s:key>
+              </s:dict>
+            </s:key>
+            <s:key name="owner">splunk-system-user</s:key>
+            <s:key name="modifiable">1</s:key>
+            <s:key name="sharing">global</s:key>
+            <s:key name="app">splunk_archiver</s:key>
+            <s:key name="can_write">1</s:key>
+            <s:key name="ttl">7200</s:key>
+          </s:dict>
+        </s:key>
+        <s:key name="searchProviders">
+          <s:list/>
+        </s:key>
+      </s:dict>
+    </content>
+  </entry>
+</feed>
+
+
+16:02:54.130 [print] xml
+16:02:54.145 [print] jobs
+16:02:54.161 after scenario inside config 
+16:02:54.161 From karate-config file 
+16:02:54.161 request:
+1 > GET http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription
+1 > Accept: application/vnd.kafka.v2+json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 192.168.1.62:8082
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:02:54.161 response time in milliseconds: 5.66
+1 < 404
+1 < Content-Length: 61
+1 < Content-Type: application/vnd.kafka.v2+json
+1 < Date: Fri, 05 Feb 2021 10:32:54 GMT
+{"error_code":40403,"message":"Consumer instance not found."}
+
+16:02:54.161 status code was: 404, expected: 200, response time: 6, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}
+16:02:54.161 after scenario inside config 
+16:02:54.176 From karate-config file 
+16:02:54.176 request:
+1 > GET http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/records?timeout=3000&max_bytes=300000
+1 > Accept: application/vnd.kafka.json.v2+json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 192.168.1.62:8082
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:02:54.192 response time in milliseconds: 9.45
+1 < 404
+1 < Content-Length: 61
+1 < Content-Type: application/vnd.kafka.json.v2+json
+1 < Date: Fri, 05 Feb 2021 10:32:54 GMT
+{"error_code":40403,"message":"Consumer instance not found."}
+
+16:02:54.192 status code was: 404, expected: 200, response time: 9, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/records?timeout=3000&max_bytes=300000, response: {"error_code":40403,"message":"Consumer instance not found."}
+16:02:54.192 after scenario inside config 
+16:02:54.192 From karate-config file 
+16:02:54.192 request:
+1 > DELETE http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription
+1 > Accept: application/vnd.kafka.v2+json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 192.168.1.62:8082
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:02:54.207 response time in milliseconds: 7.31
+1 < 404
+1 < Content-Length: 61
+1 < Content-Type: application/vnd.kafka.v2+json
+1 < Date: Fri, 05 Feb 2021 10:32:55 GMT
+{"error_code":40403,"message":"Consumer instance not found."}
+
+16:02:54.207 status code was: 404, expected: 204, response time: 7, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer/subscription, response: {"error_code":40403,"message":"Consumer instance not found."}
+16:02:54.207 after scenario inside config 
+16:02:54.223 From karate-config file 
+16:02:54.223 request:
+1 > DELETE http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer
+1 > Accept: application/vnd.kafka.v2+json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 192.168.1.62:8082
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:02:54.223 response time in milliseconds: 4.62
+1 < 404
+1 < Content-Length: 61
+1 < Content-Type: application/vnd.kafka.v2+json
+1 < Date: Fri, 05 Feb 2021 10:32:55 GMT
+{"error_code":40403,"message":"Consumer instance not found."}
+
+16:02:54.223 status code was: 404, expected: 204, response time: 5, url: http://192.168.1.62:8082/consumers/my-consumer-group/instances/veera_consumer, response: {"error_code":40403,"message":"Consumer instance not found."}
+16:02:54.223 after scenario inside config 
+16:02:54.676 From karate-config file 
+16:02:54.676 request:
+1 > POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 10
+1 > Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 > Host: www.w3schools.com
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius=40
+
+16:02:54.973 response time in milliseconds: 290.52
+1 < 200
+1 < Cache-Control: private, max-age=0,public
+1 < Content-Type: text/xml; charset=utf-8
+1 < Date: Fri, 05 Feb 2021 10:24:44 GMT
+1 < Server: Microsoft-IIS/7.5
+1 < Vary: Accept-Encoding
+1 < X-AspNet-Version: 4.0.30319
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-Powered-By: ASP.NET
+<?xml version="1.0" encoding="utf-8"?>
+<string xmlns="https://www.w3schools.com/xml/">104</string>
+
+16:02:54.973 [print] {
+  "Cache-Control": [
+    "private, max-age=0,public"
+  ],
+  "Content-Type": [
+    "text/xml; charset=utf-8"
+  ],
+  "Date": [
+    "Fri, 05 Feb 2021 10:24:44 GMT"
+  ],
+  "Server": [
+    "Microsoft-IIS/7.5"
+  ],
+  "Vary": [
+    "Accept-Encoding"
+  ],
+  "X-AspNet-Version": [
+    "4.0.30319"
+  ],
+  "X-Frame-Options": [
+    "SAMEORIGIN"
+  ],
+  "X-Powered-By": [
+    "ASP.NET"
+  ]
+}
+
+16:02:54.973 [print] xml
+16:02:54.973 [print] 291
+16:02:54.973 [print] <string xmlns="https://www.w3schools.com/xml/">104</string>
+
+16:02:54.973 after scenario inside config 

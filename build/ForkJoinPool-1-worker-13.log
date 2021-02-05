@@ -1,0 +1,128 @@
+16:02:53.176 From karate-config file 
+16:02:53.317 after scenario inside config 
+16:02:53.379 From karate-config file 
+16:02:54.317 [print] 101,Selenium,Se-HQ,
+102,UFT,Microfocus,
+103,RFT,IBM Rational,
+104,SilkTest,Microfocus,
+1111,TestComplete,SmartBear,
+106,Sasi,Sasi,
+106,Sasi,Sasi,
+106,Sasi,Sasi,
+
+16:02:54.317 after scenario inside config 
+16:02:54.410 From karate-config file 
+16:02:54.442 request:
+1 > GET http://192.168.1.62:8082/topics
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 192.168.1.62:8082
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+16:02:54.458 response time in milliseconds: 8.73
+1 < 200
+1 < Content-Type: application/vnd.kafka.v2+json
+1 < Date: Fri, 05 Feb 2021 10:32:55 GMT
+1 < Vary: Accept-Encoding, User-Agent
+["harris_topic3","pravalika_topic","shubh","topic3","vijay_topic","shalini","dhana_topic","manohar","veera_topic","_confluent_balancer_partition_samples","satyendra_topic","snehasish_topic","sasi","hemanth_topic","_confluent_balancer_api_state","Madhu-topic","_confluent-license","deekshit","_confluent_balancer_broker_samples","syed_topic","_confluent-telemetry-metrics"]
+
+16:02:54.458 [print] [
+  "harris_topic3",
+  "pravalika_topic",
+  "shubh",
+  "topic3",
+  "vijay_topic",
+  "shalini",
+  "dhana_topic",
+  "manohar",
+  "veera_topic",
+  "_confluent_balancer_partition_samples",
+  "satyendra_topic",
+  "snehasish_topic",
+  "sasi",
+  "hemanth_topic",
+  "_confluent_balancer_api_state",
+  "Madhu-topic",
+  "_confluent-license",
+  "deekshit",
+  "_confluent_balancer_broker_samples",
+  "syed_topic",
+  "_confluent-telemetry-metrics"
+]
+
+16:02:54.458 assertion failed: path: $[1], actual: 'pravalika_topic', expected: 'confluent', reason: not a sub-string
+16:02:54.458 after scenario inside config 
+16:02:54.551 From karate-config file 
+16:02:54.551 request:
+1 > POST http://www.dneonline.com/calculator.asmx
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 303
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: www.dneonline.com
+1 > SOAPAction: http://tempuri.org/Add
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+ <intA>5</intA>
+ <intB>4</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>
+
+16:02:55.239 response time in milliseconds: 686.69
+1 < 200
+1 < Cache-Control: private, max-age=0
+1 < Content-Type: text/xml; charset=utf-8
+1 < Date: Fri, 05 Feb 2021 10:32:55 GMT
+1 < Server: Microsoft-IIS/8.0
+1 < Vary: Accept-Encoding
+1 < X-AspNet-Version: 2.0.50727
+1 < X-Powered-By: ASP.NET
+1 < X-Powered-By-Plesk: PleskWin
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><AddResponse xmlns="http://tempuri.org/"><AddResult>9</AddResult></AddResponse></soap:Body></soap:Envelope>
+
+16:02:55.255 [print] [
+  "Microsoft-IIS/8.0"
+]
+
+16:02:55.255 [print] true
+16:02:55.255 [print] {
+  "Cache-Control": [
+    "private, max-age=0"
+  ],
+  "Content-Type": [
+    "text/xml; charset=utf-8"
+  ],
+  "Vary": [
+    "Accept-Encoding"
+  ],
+  "Server": [
+    "Microsoft-IIS/8.0"
+  ],
+  "X-AspNet-Version": [
+    "2.0.50727"
+  ],
+  "X-Powered-By": [
+    "ASP.NET"
+  ],
+  "X-Powered-By-Plesk": [
+    "PleskWin"
+  ],
+  "Date": [
+    "Fri, 05 Feb 2021 10:32:55 GMT"
+  ]
+}
+
+16:02:55.255 [print] xml
+16:02:55.255 [print] 687
+16:02:55.255 [print] <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <AddResponse xmlns="http://tempuri.org/">
+      <AddResult>9</AddResult>
+    </AddResponse>
+  </soap:Body>
+</soap:Envelope>
+
+16:02:55.255 after scenario inside config 
