@@ -44,3 +44,5 @@ Feature: KarateTestSuite4
 
     * print responseHeaders["Server"] == ["Microsoft-IIS/7.5"]
     * print responseHeaders["Server"][0] == "Microsoft-IIS/7.5"
+
+    #addedtogithubintegration
